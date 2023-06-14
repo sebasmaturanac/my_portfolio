@@ -22,6 +22,7 @@ a {
     overflow: hidden;
   }
   nav ul {
+
     position: absolute;
     top: 0;
     left: 0;
@@ -31,6 +32,8 @@ a {
     width: 140vw;
   }
   nav li {
+    display: flex;
+    justify-content: center;
     margin: 0;
     float: left;
     display: inline-block;
@@ -48,6 +51,29 @@ a {
     font-weight: 800;
     transform: translateY(100%);
   }
+
+  /* MEDIA QUERY PARA EL MENU EN DISPOSITIVOS */
+
+  @media only screen and (max-width: 600px) {
+    nav li {
+        float: none;
+        display: block;
+        height: auto;
+        line-height: normal;
+        width: 100%;
+        transform: none;
+        margin-bottom: 1px; /* Ajusta el margen inferior según tus necesidades */
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+ 
+
   nav li.active {
     background-color: #151515;
     color: #efefef;
