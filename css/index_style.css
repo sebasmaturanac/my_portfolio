@@ -679,6 +679,11 @@ img {
 		padding: 40px 0;
 	}
 
+  .img_profile{
+    width: 150px;
+    height: auto;
+  }
+
 	.profile::after {
 		display: none;
 	}
