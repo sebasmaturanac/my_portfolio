@@ -308,6 +308,8 @@ a {
             font-family: 'Roboto', sans-serif;
             font-size: 14px;
             letter-spacing: 1px;
+            
+            
         }
 
         .temizle {
@@ -445,6 +447,16 @@ a {
             text-decoration: none;
             color: #213738;
         }
+
+
+        @media (max-width: 767px) {
+          /* Estilos para dispositivos móviles */
+
+          .about {
+            
+        }
+
+        }    
 
 /*  PORTFOLIO STYLES */
 
