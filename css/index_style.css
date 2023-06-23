@@ -458,7 +458,7 @@ body {
 	min-height: 100vh;
 	background-color: #fafafa;
 	color: #262626;
-	padding-bottom: 100px;
+	padding-bottom: 150px;
 }
 
 img {
@@ -822,4 +822,107 @@ Remove or comment-out the code block below to see how the browser will fall-back
 			margin: 0;
 		}
 	}
+}
+
+
+
+
+
+/* CONTACT STYLES */
+
+.contact {
+  background-color: #2e2e2e;
+}
+
+#form {
+  position: relative;
+  width: 500px;
+  margin: 50px auto 100px auto;
+}
+
+input {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  
+  background: transparent;
+  outline: none;
+  color: #726659;
+  
+  border: solid 1px #b3aca7;
+  border-bottom: none;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+input:hover {
+  background: #b3aca7;
+  color: #e2dedb;
+}
+
+
+
+textarea {
+  width: 470px;
+  max-width: 470px;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+  
+  background: transparent;
+  outline: none;
+  
+  color: #726659;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  
+  border: solid 1px #b3aca7;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+  background: #b3aca7;
+  color: #e2dedb;
+}
+
+#submit {
+  width: 470px;
+  
+  padding: 0;
+  margin: -5px 0px 0px 0px;
+  
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  color: #b3aca7;
+  
+  outline:none;
+  cursor: pointer;
+  
+  border: solid 1px #b3aca7;
+  border-top: none;
+}
+#submit:hover {
+  color: #e2dedb;
+}
+
+
+
+
+/* BLOG STYLES */
+
+.blog{
+  background-color: #1b1b1b;
+}
+
+.blog h1 {
+  color: whitesmoke;
+  text-align: center;
 }
