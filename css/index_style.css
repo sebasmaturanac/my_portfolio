@@ -453,11 +453,11 @@ a {
     background-color: #1b1b1b;
 }
 
-body {
+.portfolio {
 	font-family: "Open Sans", Arial, sans-serif;
 	min-height: 100vh;
-	background-color: #fafafa;
-	color: #262626;
+	background-color: #252525;
+	color: #c5c4c4;
 	padding-bottom: 150px;
 }
 
@@ -465,7 +465,7 @@ img {
 	display: block;
 }
 
-.container {
+.div-container {
 	max-width: 1250px;
 	margin: 0 auto;
 	padding: 0 20px;
@@ -539,7 +539,7 @@ img {
 	display: inline-block;
 	font-size: 32px;
 	font-weight: 300;
-  color: rgb(190, 187, 187);
+ 
 }
 
 .profile-edit-btn {
@@ -549,7 +549,7 @@ img {
 	border-radius: 3px;
 	padding: 0 24px;
 	margin-left: 20px;
-  color: rgb(190, 187, 187);
+  
 }
 
 .profile-settings-btn {
@@ -561,7 +561,7 @@ img {
 
 .profile-stats {
 	margin-top: 23px;
-  color: rgb(190, 187, 187);
+  
 }
 
 .profile-stats li {
@@ -582,7 +582,7 @@ img {
 	font-weight: 400;
 	line-height: 1.5;
 	margin-top: 23px;
-  color: rgb(190, 187, 187);
+ 
 }
 
 .profile-real-name,
@@ -596,7 +596,7 @@ img {
 .gallery {
 	display: flex;
 	flex-wrap: wrap;
-	margin: -1rem -10px;
+	margin: -10px -10px;
 	padding-bottom: 30px;
 }
 
@@ -626,8 +626,8 @@ img {
 
 .gallery-item-info li {
 	display: inline-block;
-	font-size: 17px;
-	font-weight: 600;
+	font-size: 20px;
+	font-weight: 400px;
 }
 
 .gallery-item-likes {
@@ -667,7 +667,7 @@ img {
 
 /* Media Query */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
 	.profile {
 		display: flex;
 		flex-wrap: wrap;
@@ -686,10 +686,7 @@ img {
 		width: auto;
 	}
 
-	.profile-image img {
-		width: 77px;
-	}
-
+  
 	.profile-user-settings {
 		flex-basis: calc(100% - 107px);
 		display: flex;
@@ -778,8 +775,10 @@ Remove or comment-out the code block below to see how the browser will fall-back
 
 	.gallery {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-		grid-gap: 20px;
+		/* grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+		grid-gap: 20px; */
+    grid-template-columns: repeat(3, 1fr); /* Cambiar a repeat(3, 1fr) para mostrar siempre 3 columnas */
+  grid-gap: 0px; /* Ajusta el espacio entre las imágenes según sea necesario */
 	}
 
 	.profile-image,
@@ -792,6 +791,10 @@ Remove or comment-out the code block below to see how the browser will fall-back
 		margin: 0;
 	}
 
+  
+
+  
+
 	@media (max-width: 40.px) {
 		.profile {
 			grid-template-columns: auto 1fr;
@@ -801,6 +804,10 @@ Remove or comment-out the code block below to see how the browser will fall-back
 		.profile-image {
 			grid-row: 1 / 2;
 		}
+
+   
+    
+
 
 		.profile-user-settings {
 			display: grid;
