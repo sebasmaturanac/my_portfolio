@@ -953,14 +953,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
   }
 }
 
-h2 {
-  font-family: 'Arimo', sans-serif;
-  color: #fff;
-  font-size: clamp(30px, 6vw, 60px);
-  letter-spacing: 2px;
-  text-align: center;
-  transform: scale(.95, 1);
-}
+
 
 .links {
   display: flex;
@@ -974,26 +967,10 @@ h2 {
   cursor: pointer;
 }
 
-img {
+.img-contact {
   width: 45px;
   height: 45px;
-  filter: 
-    hue-rotate(220deg)
-    drop-shadow(2px 4px 4px #0006);
-  transition: 0.2s;
-  user-select: none;
-}
-
-img:hover {
-  transform: scale(1.1, 1.1);
-}
-
-img:active {
-  transform: scale(1.1, 1.1);
-  filter: 
-    hue-rotate(220deg)
-    drop-shadow(2px 4px 4px #222)
-    sepia(0.3);
+ 
 }
 
 .form-item {
