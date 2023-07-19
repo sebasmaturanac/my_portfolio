@@ -25,7 +25,6 @@ a {
     overflow: hidden;
   }
   nav ul {
-
     position: absolute;
     top: 0;
     left: 0;
@@ -48,18 +47,20 @@ a {
     color: #555;
     transition: background-color 0.5s 0.2s ease, color 0.3s ease;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-weight: 800;
     transform: translateY(100%);
   }
 
+
+
   /* MEDIA QUERY PARA EL MENU EN DISPOSITIVOS */
 
 
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 800px) {
 
     nav li {
         float: none;
@@ -117,7 +118,7 @@ a {
     animation: pop 0.5s 1.05s 1 forwards;
   }
   nav li:hover {
-    color: #ececec;
+        color: #ececec;
   }
   nav li:active {
     background-color: #222;
@@ -526,6 +527,15 @@ img {
   height: auto;
 }
 
+.bio-container{
+  overflow: auto;
+}
+
+.logo-portfolio{
+  width: 18px;
+  float:left;
+}
+
 .profile-image {
  
 	float: left;
@@ -599,6 +609,10 @@ img {
 	line-height: 1.5;
 	margin-top: 23px;
  
+}
+
+.profile-social{
+  margin-left: 10px;
 }
 
 .profile-real-name,
@@ -875,111 +889,201 @@ Remove or comment-out the code block below to see how the browser will fall-back
 
 /* CONTACT STYLES */
 
-.contact {
-  background-color: #2e2e2e;
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#form {
-  position: relative;
-  width: 500px;
-  margin: 50px auto 100px auto;
+.contact-box {
+  width: clamp(100px, 90%, 1000px);
+  margin: 80px 50px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-input {
-  font-family: 'Lato', sans-serif;
-  font-size: 0.875em;
-  width: 470px;
-  height: 50px;
-  padding: 0px 15px 0px 15px;
-  
-  background: transparent;
-  outline: none;
-  color: #726659;
-  
-  border: solid 1px #b3aca7;
-  border-bottom: none;
-  
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-}
-input:hover {
-  background: #b3aca7;
-  color: #e2dedb;
+.contact-links, .contact-form-wrapper {
+  width: 50%;
+  padding: 8% 5% 10% 5%;
 }
 
 
-
-textarea {
-  width: 470px;
-  max-width: 470px;
-  height: 110px;
-  max-height: 110px;
-  padding: 15px;
-  
-  background: transparent;
-  outline: none;
-  
-  color: #726659;
-  font-family: 'Lato', sans-serif;
-  font-size: 0.875em;
-  
-  border: solid 1px #b3aca7;
-  
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
+.contact-links {
+  background-color: #1f2e43;
+  background:
+    radial-gradient(
+      circle at 55% 92%, #426691 0 12%, transparent 12.2%
+    ), 
+    radial-gradient(
+      circle at 94% 72%, #426691 0 10%, transparent 10.2%
+    ), 
+    radial-gradient(
+      circle at 20% max(78%, 350px), #263a53 0 7%, transparent 7.2%
+    ), 
+    radial-gradient(
+      circle at 0% 0%, #263a53 0 40%, transparent 40.2%
+    ), 
+    #1f2e43;
+  border-radius: 10px 0 0 10px;
 }
 
-textarea:hover {
-  background: #b3aca7;
-  color: #e2dedb;
+.contact-form-wrapper {
+  background-color: #ffffff8f;
+  border-radius: 0 10px 10px 0;
 }
 
-#submit {
-  width: 470px;
+@media only screen and (max-width: 800px) {
+  .contact-links, .contact-form-wrapper {
+    width: 100%;
+  }
   
-  padding: 0;
-  margin: -5px 0px 0px 0px;
+  .contact-links {
+    border-radius: 10px 10px 0 0;
+  }
   
-  font-family: 'Lato', sans-serif;
-  font-size: 0.875em;
-  color: #b3aca7;
-  
-  outline:none;
+  .contact-form-wrapper {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .contact-box {
+    width: 95%;
+    margin: 8% 5%;
+  }
+}
+
+h2 {
+  font-family: 'Arimo', sans-serif;
+  color: #fff;
+  font-size: clamp(30px, 6vw, 60px);
+  letter-spacing: 2px;
+  text-align: center;
+  transform: scale(.95, 1);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.link {
+  margin: 10px;
   cursor: pointer;
+}
+
+img {
+  width: 45px;
+  height: 45px;
+  filter: 
+    hue-rotate(220deg)
+    drop-shadow(2px 4px 4px #0006);
+  transition: 0.2s;
+  user-select: none;
+}
+
+img:hover {
+  transform: scale(1.1, 1.1);
+}
+
+img:active {
+  transform: scale(1.1, 1.1);
+  filter: 
+    hue-rotate(220deg)
+    drop-shadow(2px 4px 4px #222)
+    sepia(0.3);
+}
+
+.form-item {
+  position: relative;
+}
+
+label, input, textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
+label {
+  position: absolute;
+  top: 10px;
+  left: 2%;
+  color: #999;
+  font-size: clamp(14px, 1.5vw, 18px);
+  pointer-events: none;
+  user-select: none;
+}
+
+input, textarea {
+  width: 100%;
+  outline: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 12px;
+  font-size: clamp(15px, 1.5vw, 18px);
+}
+
+input:focus+label, 
+input:valid+label, 
+textarea:focus+label, 
+textarea:valid+label {
+  font-size: clamp(13px, 1.3vw, 16px);
+  color: #777;
+  top: -20px;
+  transition: all .225s ease;
+}
+
+.submit-btn {
+  background-color: #363636;
+  filter: drop-shadow(2px 2px 3px #0003);
+  color: #fff;
+  font-family: "Poppins",sans-serif;
+  font-size: clamp(16px, 1.6vw, 18px);
+  display: block;
+  padding: 12px 20px;
+  margin: 2px auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.submit-btn:active {
+  transform: scale(1.1, 1.1);
+  filter: sepia(0.5);
+}
+
+@media only screen and (max-width: 800px) {
+  h2 {
+    font-size: clamp(40px, 10vw, 60px);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h2 {
+    font-size: clamp(30px, 12vw, 60px);
+  }
   
-  border: solid 1px #b3aca7;
-  border-top: none;
+  .links {
+    padding-top: 30px;
+  }
+  
+  img {
+    width: 38px;
+    height: 38px;
+  }
 }
-#submit:hover {
-  color: #e2dedb;
-}
-
-
-
 
 
 
 
 /* TECHNOLOGIES STYLES */
-
-.context {
-  color: whitesmoke;
-  text-align: center;
-    width: 100%;
-    position: absolute;
-    top:50vh;
-    
-}
-
-.context h1{
-    text-align: center;
-    color: #fff;
-    font-size: 50px;
-}
 
 
 .area{
@@ -1105,14 +1209,6 @@ textarea:hover {
     }
 
 }
-
-
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
-
-
-
-
-
 
 .chart {
   position: relative;
@@ -1309,3 +1405,333 @@ textarea:hover {
   }
 }
 /* END Keyframes for the initial animation */
+
+
+.skills-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.title-skills{
+  margin-bottom: 50px;
+ color: whitesmoke;
+}
+
+.skills-bar-container {
+  position: relative;
+  width: 40%;
+  min-width: 350px;
+  margin: 5% auto;
+  list-style: none;
+}
+
+.skills-bar-container li {
+  background: #666666;
+  position: relative;
+  width: 100%;
+  height: 3px;
+  margin-bottom: 35px;
+  margin-top: 8px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.skills-bar-container label {
+  color: #fff;
+  position: relative;
+  margin-left: 0px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.progressbar {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+#progress-htmlcss {
+  -webkit-animation-name: progress-htmlcss;
+  animation-name: progress-htmlcss;
+  -webkit-animation-delay: .7s;
+  animation-delay: .7s;
+}
+
+#progress-jsjq {
+  -webkit-animation-name: progress-jsjq;
+  animation-name: progress-jsjq;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+
+#progress-booststrap {
+  -webkit-animation-name: progress-booststrap;
+  animation-name: progress-booststrap;
+  -webkit-animation-delay: 2.1s;
+  animation-delay: 2.1s;
+}
+
+#progress-git {
+  -webkit-animation-name: progress-git;
+  animation-name: progress-git;
+  -webkit-animation-delay: .7s;
+  animation-delay: .7s;
+}
+
+#progress-illustrator {
+  -webkit-animation-name: progress-illustrator;
+  animation-name: progress-illustrator;
+  -webkit-animation-delay: 2.1s;
+  animation-delay: 2.1s;
+}
+
+#progress-java {
+  -webkit-animation-name: progress-java;
+  animation-name: progress-java;
+  -webkit-animation-delay: .7s;
+  animation-delay: .7s;
+}
+
+#progress-csharp {
+  -webkit-animation-name: progress-csharp;
+  animation-name: progress-csharp;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+
+#progress-sql {
+  -webkit-animation-name: progress-sql;
+  animation-name: progress-sql;
+  -webkit-animation-delay: 2.1s;
+  animation-delay: 2.1s;
+}
+
+.progressblue {
+  background-color: #f7ca18;
+}
+
+@-webkit-keyframes progress-htmlcss {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 90%;
+  }
+}
+
+@-webkit-keyframes progress-jsjq {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 10%;
+  }
+}
+
+@-webkit-keyframes progress-booststrap {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 85%;
+  }
+}
+
+@-webkit-keyframes progress-git {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 100%;
+  }
+}
+
+@-webkit-keyframes progress-illustrator {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 75%;
+  }
+}
+
+@-webkit-keyframes progress-java {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 75%;
+  }
+}
+
+@-webkit-keyframes progress-csharp {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 65%;
+  }
+}
+
+@-webkit-keyframes progress-sql {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 50%;
+  }
+}
+
+@-moz-keyframes progress-htmlcss {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 90%;
+  }
+}
+
+@-moz-keyframes progress-jsjq {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 10%;
+  }
+}
+
+@-moz-keyframes progress-booststrap {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 85%;
+  }
+}
+
+@-moz-keyframes progress-git {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 100%;
+  }
+}
+
+@-moz-keyframes progress-illustrator {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 75%;
+  }
+}
+
+@-moz-keyframes progress-java {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 75%;
+  }
+}
+
+@-moz-keyframes progress-csharp {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 65%;
+  }
+}
+
+@-moz-keyframes progress-sql {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 50%;
+  }
+}
+
+@keyframes progress-htmlcss {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 90%;
+  }
+}
+
+@keyframes progress-jsjq {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 10%;
+  }
+}
+
+@keyframes progress-booststrap {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 85%;
+  }
+}
+
+@keyframes progress-git {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 100%;
+  }
+}
+
+@keyframes progress-illustrator {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 75%;
+  }
+}
+
+@keyframes progress-java {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 75%;
+  }
+}
+
+@keyframes progress-csharp {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 65%;
+  }
+}
+
+@keyframes progress-sql {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 50%;
+  }
+}

@@ -21,36 +21,52 @@
         <li><a href="./about.html"> About me</a></li>
         <li><a href="./portfolio.html">Portfolio</a> </li>
         <li><a href="./technologies.html">Technologies</a> </li>
-        <li><a href="./contact.html">Contact me</a> </li>
+        <li class="active"><a href="./contact.html">Contact me</a> </li>
         <li class="slide"></li>
       </ul>
   </nav>
   
-  <div class="container" id="form">
-  <form id="form" class="form_contact">
-		<br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <input id="name" type="text" placeholder="NAME">
-    <input id="email" type="text" placeholder="E-MAIL">
-    <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
-  <input id="submit" type="submit" value="Send!">
 
-</form>
-</div>
-
-
-</header>
-
-
+<body>
   
-
-
-
-  
-    <script src="./pages/"></script>
+  <section id="contact">
+    <div class="contact-box">
+      <div class="contact-links">
+        <h2>Contact</h2>
+        <div class="links">
+          <div class="link">
+            <a><img src="https://i.postimg.cc/m2mg2Hjm/linkedin.png" alt="linkedin"></a>
+          </div>
+          <div class="link">
+            <a><img src="https://i.postimg.cc/YCV2QBJg/github.png" alt="github"></a>
+          </div>
+          <div class="link">
+            <a><img src="https://i.postimg.cc/W4Znvrry/codepen.png" alt="codepen"></a>
+          </div>
+          <div class="link">
+            <a><img src="https://i.postimg.cc/NjLfyjPB/email.png" alt="email"></a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrapper">
+        <form>
+          <div class="form-item">
+            <input type="text" name="sender" required>
+            <label>Name:</label>
+          </div>
+          <div class="form-item">
+            <input type="text" name="email" required>
+            <label>Email:</label>
+          </div>
+          <div class="form-item">
+            <textarea class="" name="message" required></textarea>
+            <label>Message:</label>
+          </div>
+          <button class="submit-btn">Send</button>  
+        </form>
+      </div>
+    </div>
+  </section>  
     
 </body>
 
