@@ -13,7 +13,7 @@ a {
   ::selection {
     background-color: #f7ca18;
     color: #1b1b1b;
-  }
+  } 
 
   nav {
     z-index: 9999;
