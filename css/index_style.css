@@ -1459,6 +1459,13 @@ textarea:valid+label {
   animation-delay: 1.4s;
 }
 
+#progress-laravel {
+  -webkit-animation-name: progress-laravel;
+  animation-name: progress-laravel;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+
 #progress-booststrap {
   -webkit-animation-name: progress-booststrap;
   animation-name: progress-booststrap;
@@ -1520,6 +1527,15 @@ textarea:valid+label {
   }
   100% {
       width: 10%;
+  }
+}
+
+@-webkit-keyframes progress-laravel {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 19%;
   }
 }
 
@@ -1595,6 +1611,15 @@ textarea:valid+label {
   }
 }
 
+@-moz-keyframes progress-laravel {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 19%;
+  }
+}
+
 @-moz-keyframes progress-booststrap {
   0% {
       width: 0%;
@@ -1664,6 +1689,15 @@ textarea:valid+label {
   }
   100% {
       width: 10%;
+  }
+}
+
+@keyframes progress-laravel {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 19%;
   }
 }
 
